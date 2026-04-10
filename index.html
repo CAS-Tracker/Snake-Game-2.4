@@ -566,8 +566,8 @@ class Engine {
         
         let ax=0, ay=0;
         // MODIFICADO: Incrementada la aceleración de 0.8 a 1.5 para recuperar la velocidad y soltura del personaje.
-        if(this.inputs['w']) ay -= 1.5; if(this.inputs['s']) ay += 1.5;
-        if(this.inputs['a']) ax -= 1.5; if(this.inputs['d']) ax += 1.5;
+        if(this.inputs['w']) ay -= 0.8; if(this.inputs['s']) ay += 0.8;
+        if(this.inputs['a']) ax -= 0.8; if(this.inputs['d']) ax += 0.8;
         this.player.vx = (this.player.vx + ax) * 0.82; this.player.vy = (this.player.vy + ay) * 0.82;
         
         this.player.x = Math.max(0, Math.min(this.world.width-32, this.player.x + this.player.vx));
